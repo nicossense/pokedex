@@ -31,7 +31,7 @@ class Page extends Component {
       const pokemonsIds = pokemonsAllIds.filter(pokemonId => {
         const pokemon = pokemonsById[pokemonId]
 
-        return pokemon.name.substring(0, searchString.length) === searchString
+        return pokemon.name.startsWith(searchString)
       })
 
       this.setState({
